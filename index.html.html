@@ -1,0 +1,1073 @@
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SS Arts Studio – Photography &amp; Videography</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#B8963E;--gold-lt:#F5EDD8;--gold-mid:#D4B57A;--ink:#1C1C1C;--ink2:#5A5A5A;--ink3:#9A9A9A;--bg:#FAFAF8;--bg2:#F4F1EC;--bg3:#EDE8DF;--white:#FFFFFF;--border:#E8E3DA}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:rgba(250,250,248,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:1rem 3rem;display:flex;justify-content:space-between;align-items:center}
+.nav-brand{display:flex;align-items:center;gap:10px;cursor:pointer}
+.nav-logo-mark{width:34px;height:34px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:600;color:var(--gold)}
+.nav-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--ink);letter-spacing:1px}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{color:var(--ink2);text-decoration:none;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;transition:color 0.2s;cursor:pointer}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--ink);color:var(--white);padding:0.55rem 1.4rem;font-size:0.7rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;border:none;cursor:pointer;transition:background 0.2s;border-radius:2px;font-family:'DM Sans',sans-serif}
+.nav-cta:hover{background:var(--gold)}
+
+/* PAGES */
+.page{display:none}
+.page.active{display:block}
+
+/* HERO */
+.hero{min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:5rem 2rem 3rem;background:var(--bg);position:relative; background-image: url(file:///G:/Hari/portfiolio/portfolio/assets/1.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;}
+.hero-line{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold-mid),transparent)}
+.hero-tag{font-size:0.62rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,6vw,5rem);font-weight:300;line-height:1.1;color:white;margin-bottom:0.5rem}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero-sub{font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--ink3);margin-bottom:2.5rem} 
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-dark{background:var(--ink);color:var(--white);padding:0.85rem 2.2rem;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;cursor:pointer;border:none;text-decoration:none;display:inline-block;transition:background 0.2s;border-radius:2px;font-family:'DM Sans',sans-serif}
+.btn-dark:hover{background:var(--gold)}
+.btn-line{border:1px solid rgb(0, 0, 0);color:rgb(0, 0, 0);padding:0.85rem 2.2rem;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;background:transparent;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.2s;border-radius:2px;font-family:'DM Sans',sans-serif}
+.btn-line:hover{border-color:var(--gold);color:var(--gold)}
+.hero-stats{display:flex;gap:3rem;justify-content:center;margin-top:4rem;padding-top:2.5rem;border-top:1px solid var(--border)}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--gold)}
+.stat-label{font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--ink3);margin-top:0.2rem}
+
+/* SECTIONS */
+section{padding:5rem 3rem}
+.sec-tag{font-size:0.6rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:300;color:var(--ink);margin-bottom:1.2rem;line-height:1.2}
+.divider{width:40px;height:1.5px;background:var(--gold);margin-bottom:2rem}
+.divider-c{margin:0 auto 2rem}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 4fr;gap:4rem;align-items:center;max-width:1100px;margin:0 auto}
+.about-img{position:relative}
+.about-img img{height:480px;object-fit:cover}
+.about-img-frame{position:absolute;top: -12px; left: -12px; right: -14px; bottom: -15px;border:1px solid var(--gold-mid);z-index:-1}     
+.badge{font-size:0.6rem;letter-spacing:1.5px;text-transform:uppercase;border:1px solid var(--border);color:var(--ink2);padding:0.3rem 0.8rem;border-radius:2px;background:var(--white)}
+
+/* SERVICES GRID */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;max-width:1200px;margin:3rem auto 0}
+.svc-card{background:var(--white);border:1px solid var(--border);padding:2rem;border-radius:4px;cursor:pointer;transition:all 0.25s;position:relative;overflow:hidden}
+.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform 0.3s}
+.svc-card:hover{border-color:var(--gold-mid);transform:translateY(-3px);box-shadow:0 8px 24px rgba(184,150,62,0.1)}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-icon{width:48px;height:48px;background:var(--gold-lt);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:1.2rem}
+.svc-card h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--ink);margin-bottom:0.5rem}
+.svc-card p{font-size:0.76rem;color:var(--ink3);line-height:1.7;margin-bottom:1rem}
+.svc-card-price{font-size:0.68rem;color:var(--gold);letter-spacing:0.5px;font-weight:500}
+.svc-card-arrow{position:absolute;top:1.5rem;right:1.5rem;font-size:1.1rem;color:var(--border);transition:all 0.3s}
+.svc-card:hover .svc-card-arrow{color:var(--gold);transform:translateX(3px)}
+
+/* SERVICE DETAIL PAGE */
+.svc-detail-hero{padding:5rem 3rem 3rem;background:var(--bg2);border-bottom:1px solid var(--border)}
+.svc-detail-hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.svc-detail-back{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink3);background:none;border:none;cursor:pointer;margin-bottom:2rem;transition:color 0.2s;font-family:'DM Sans',sans-serif;padding:0}
+.svc-detail-back:hover{color:var(--gold)}
+.svc-detail-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:300;color:var(--ink);margin-bottom:0.5rem;line-height:1.1}
+.svc-detail-sub{font-size:0.78rem;color:var(--ink3);letter-spacing:2px;text-transform:uppercase;margin-bottom:1.5rem}
+.svc-detail-desc{font-size:0.88rem;color:var(--ink2);line-height:1.9;margin-bottom:2rem}
+.svc-detail-img{width:100%;object-fit:cover;border-radius:4px}
+
+/* MEDIA GALLERY */
+.media-section{padding:4rem 3rem;background:var(--bg)}
+.media-section-title{max-width:1200px;margin:0 auto 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.media-tabs{display:flex;gap:0;border:1px solid var(--border);border-radius:4px;overflow:hidden;background:var(--white)}
+.media-tab{background:none;border:none;padding:0.55rem 1.2rem;font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;color:var(--ink3);transition:all 0.2s;font-family:'DM Sans',sans-serif}
+.media-tab.active{background:var(--ink);color:var(--white)}
+.media-tab:hover:not(.active){background:var(--bg2);color:var(--ink)}
+
+/* PHOTO GRID */
+.photo-grid{display:grid;gap:0.6rem;max-width:1200px;margin:0 auto}
+.photo-grid-main{grid-template-columns:repeat(3,1fr)}
+.photo-item{position:relative;overflow:hidden;border-radius:3px;cursor:pointer}
+.photo-item.tall{grid-row:span 2}
+.photo-item.wide{grid-column:span 2}
+.photo-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;min-height:200px}
+.photo-item:hover img{transform:scale(1.04)}
+.photo-overlay{position:absolute;inset:0;background:rgba(28,28,28,0);transition:background 0.3s;display:flex;align-items:flex-end;padding:1rem}
+.photo-item:hover .photo-overlay{background:rgba(28,28,28,0.4)}
+.photo-label{font-size:0.62rem;letter-spacing:1.5px;text-transform:uppercase;color:#fff;opacity:0;transition:opacity 0.3s}
+.photo-item:hover .photo-label{opacity:1}
+
+/* VIDEO GRID */
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem;max-width:1200px;margin:0 auto}
+.video-card{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.video-thumb{position:relative;aspect-ratio:16/9;cursor:pointer;overflow:hidden;background:#1C1C1C}
+.video-thumb img{width:100%;height:100%;object-fit:cover;opacity:0.75;transition:all 0.3s}
+.video-thumb:hover img{opacity:0.5;transform:scale(1.03)}
+.video-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;background:rgba(250,250,248,0.92);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;transition:all 0.3s;padding-left:3px}
+.video-thumb:hover .video-play{background:var(--gold);transform:translate(-50%,-50%) scale(1.1)}
+.video-info{padding:1rem 1.2rem}
+.video-title{font-size:0.85rem;font-weight:500;color:var(--ink);margin-bottom:0.3rem}
+.video-meta{font-size:0.7rem;color:var(--ink3)}
+.video-duration{position:absolute;bottom:0.6rem;right:0.7rem;background:rgba(28,28,28,0.75);color:#fff;font-size:0.62rem;padding:0.15rem 0.45rem;border-radius:2px}
+
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(10,8,18,0.94);z-index:999;align-items:center;justify-content:center}
+.lightbox.open{display:flex}
+.lightbox-inner{position:relative;max-width:90vw;max-height:90vh}
+.lightbox-inner img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:2px}
+.lightbox-close{position:fixed;top:1.5rem;right:2rem;background:none;border:1px solid rgba(255,255,255,0.3);color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+.lightbox-close:hover{background:var(--gold);border-color:var(--gold)}
+.lightbox-label{position:absolute;bottom:-2.2rem;left:50%;transform:translateX(-50%);font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);white-space:nowrap}
+
+/* VIDEO MODAL */
+.video-modal{display:none;position:fixed;inset:0;background:rgba(10,8,18,0.96);z-index:999;align-items:center;justify-content:center;flex-direction:column}
+.video-modal.open{display:flex}
+.video-modal-close{position:fixed;top:1.5rem;right:2rem;background:none;border:1px solid rgba(255,255,255,0.3);color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+.video-modal-close:hover{background:var(--gold);border-color:var(--gold)}
+.video-modal-yt{width:min(860px,90vw);aspect-ratio:16/9}
+.video-modal-yt iframe{width:100%;height:100%;border:none;border-radius:4px}
+
+/* SUB SERVICES */
+.sub-svcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;max-width:1200px;margin:2rem auto 0}
+.sub-svc{background:var(--white);border:1px solid var(--border);padding:1.4rem;border-radius:4px}
+.sub-svc-name{font-size:0.82rem;font-weight:500;color:var(--ink);margin-bottom:0.3rem}
+.sub-svc-desc{font-size:0.74rem;color:var(--ink3);line-height:1.6;margin-bottom:0.5rem}
+.sub-svc-price{font-size:0.68rem;color:var(--gold);letter-spacing:0.5px}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem;max-width:1100px;margin:3rem auto 0}
+.testi-card{background:var(--white);border:1px solid var(--border);padding:2rem;border-radius:4px}
+.testi-stars{color:var(--gold);font-size:0.7rem;letter-spacing:3px;margin-bottom:1rem}
+.testi-text{font-size:0.84rem;color:var(--ink2);line-height:1.85;font-style:italic;margin-bottom:1.2rem}
+.testi-author{font-size:0.7rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink);font-weight:500}
+.testi-event{font-size:0.65rem;color:var(--ink3);margin-top:0.2rem}
+
+/* PRICING */
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;max-width:1100px;margin:3rem auto 0}
+.price-card{border:1px solid var(--border);padding:2.5rem 2rem;border-radius:4px;background:var(--white);position:relative}
+.price-card.featured{border:2px solid var(--gold)}
+.feat-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--white);font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;padding:0.28rem 1rem;white-space:nowrap;font-weight:500;border-radius:0 0 4px 4px}
+.price-plan{font-size:0.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem}
+.price-amount{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:var(--ink)}
+.price-amount span{font-size:1rem;vertical-align:super}
+.price-desc{font-size:0.75rem;color:var(--ink3);margin-bottom:1.5rem}
+.price-features{list-style:none;margin-bottom:2rem}
+.price-features li{font-size:0.78rem;color:var(--ink2);padding:0.4rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0.5rem}
+.price-features li::before{content:'—';color:var(--gold);font-size:0.6rem}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;max-width:1000px;margin:3rem auto 0;align-items:start}
+.c-info-item{display:flex;gap:1rem;margin-bottom:1.8rem;align-items:flex-start}
+.c-icon{width:38px;height:38px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;border-radius:2px;font-size:14px}
+.c-label{font-size:0.58rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:0.25rem}
+.c-val{font-size:0.84rem;color:var(--ink2)}
+.c-form input,.c-form select,.c-form textarea{width:100%;background:var(--white);border:1px solid var(--border);color:var(--ink);padding:0.8rem 1rem;font-family:'DM Sans',sans-serif;font-size:0.82rem;margin-bottom:0.9rem;outline:none;transition:border-color 0.2s;border-radius:2px}
+.c-form input::placeholder,.c-form textarea::placeholder{color:var(--ink3)}
+.c-form input:focus,.c-form select:focus,.c-form textarea:focus{border-color:var(--gold)}
+.c-form textarea{height:100px;resize:none}
+
+.social-strip{background:var(--bg2);padding:1rem 3rem;display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.social-strip a{color:var(--ink3);text-decoration:none;font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;transition:color 0.2s}
+.social-strip a:hover{color:var(--gold)}
+footer{background:var(--ink);padding:3rem;text-align:center}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold);letter-spacing:3px;margin-bottom:0.3rem}
+.f-tagline{font-size:0.6rem;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:2rem}
+.f-links{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem}
+.f-links a{color:rgba(255,255,255,0.45);text-decoration:none;font-size:0.65rem;letter-spacing:1px;text-transform:uppercase;transition:color 0.2s;cursor:pointer}
+.f-links a:hover{color:var(--gold)}
+.f-copy{font-size:0.62rem;color:rgba(255,255,255,0.2)}
+
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  section,.svc-detail-hero,.media-section{padding:3rem 1.5rem}
+  .about-grid,.contact-grid,.svc-detail-hero-inner{grid-template-columns:1fr}
+  .hero-stats{gap:1.5rem}
+  .photo-grid-main{grid-template-columns:repeat(2,1fr)}
+  .photo-item.wide{grid-column:span 1}
+  .photo-item.tall{grid-row:span 1}
+  .about-img-frame{right: 14px;}
+  .map{width: 360;}
+}
+</style>
+</head>
+<body style="">
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <div class="lightbox-inner">
+    <img id="lightbox-img" src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=800&amp;q=80" alt="">
+    <div class="lightbox-label" id="lightbox-label">Sangeet Night</div>
+  </div>
+</div>
+
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="videoModal">
+  <button class="video-modal-close" onclick="closeVideoModal()">✕</button>
+  <div id="videoModalContent"></div>
+  <div style="margin-top:1rem;font-size:0.72rem;letter-spacing:1px;color:rgba(255,255,255,0.4)" id="videoModalTitle"></div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand" onclick="showPage('home')">
+    <div class="nav-logo-mark"><img src="file:///G:/Hari/portfiolio/portfolio/assets/logo.png" alt="" style="
+    margin-top: 10pt;
+    width: 37pt;
+    height: 25pt;
+"></div> 
+    <span class="nav-name">SS Arts Studio</span>
+  </div>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')">Home</a></li>
+    <li><a onclick="showPage('home');setTimeout(()=&gt;goTo('#about'),80)">About</a></li>
+    <li><a onclick="showPage('home');setTimeout(()=&gt;goTo('#services'),80)">Services</a></li>
+    <li><a onclick="showPage('home');setTimeout(()=&gt;goTo('#pricing'),80)">Pricing</a></li>
+    <li><a onclick="showPage('home');setTimeout(()=&gt;goTo('#testimonials'),80)">Reviews</a></li>
+    <li><a onclick="showPage('home');setTimeout(()=&gt;goTo('#contact'),80)">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="showPage('home');setTimeout(()=&gt;goTo('#contact'),80)">Book Now</button>
+</nav>
+
+<!-- ====== HOME PAGE ====== -->
+<div class="page active" id="page-home">
+
+  <section class="hero" id="home" style="padding-top:5rem;">
+    
+    <div class="hero-line"></div>
+    <div>
+      <div class="hero-tag">Capturing Life's Finest Moments</div>
+      <h1>SS Arts <em>Studio</em></h1>
+      <p class="hero-sub">Photography · Videography · Digital Media · Albums</p>
+      <div class="hero-btns">
+        <button class="btn-dark" onclick="goTo('#services')">Explore Services</button>
+        <button class="btn-line" onclick="goTo('#contact')">Book a Session</button>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num">500+</div><div class="stat-label">Events Covered</div></div>
+        <div><div class="stat-num">8+</div><div class="stat-label">Years Experience</div></div>
+        <div><div class="stat-num">1200+</div><div class="stat-label">Happy Clients</div></div>
+        <div><div class="stat-num">50K+</div><div class="stat-label">Photos Delivered</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="file:///G:/Hari/portfiolio/portfolio/assets/2.jpg" alt="SS Arts Studio photographer at work">
+        <div class="about-img-frame"></div>
+      </div>
+      <div>
+        <div class="sec-tag">About Us</div>
+        <h2 class="sec-title">Storytellers Behind the Lens</h2>
+        <div class="divider"></div>
+        <p style="color:var(--ink2);font-size:0.87rem;line-height:1.9;margin-bottom:1rem">At SS Arts Studio, we craft timeless visual stories. Based in Tamil Nadu, our studio brings an artistic, editorial eye to every frame — from intimate portraits to grand weddings.</p>
+        <p style="color:var(--ink2);font-size:0.87rem;line-height:1.9;margin-bottom:1rem">With 8+ years of expertise, we cover photography, cinematic videography, drone aerials, digital marketing and premium album production across South India.</p>
+        <p style="color:var(--ink2);font-size:0.87rem;line-height:1.9;margin-bottom:1rem">We travel across South India and beyond — every event is treated with the same devotion, whether it is a 10-person family shoot or a 1,000-guest wedding.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem">
+          <span class="badge">Wedding Specialist</span>
+          <span class="badge">Drone Certified</span>
+          <span class="badge">4K Videography</span>
+          <span class="badge">Digital Marketing</span>
+          <span class="badge">Premium Albums</span>
+          <span class="badge">Instagram Management</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section 
+  id="services" 
+  style="
+    background: var(--bg2);
+    background-image: url('file:///G:/Hari/portfiolio/portfolio/assets/3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+>
+    <div style="text-align:center;max-width:600px;margin:0 auto">
+      <div class="sec-tag">What We Offer</div>
+      <h2 class="sec-title">Our Services</h2>
+      <div class="divider divider-c"></div>
+      <p style="font-size:0.84rem;color:var(--ink2)">Click any service to explore photos, videos and full details of everything we offer.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card" onclick="showServicePage('wedding')">
+        <div class="svc-icon">💍</div>
+        <h3>Wedding Photography</h3>
+        <p>Full-day coverage, pre &amp; post-wedding, engagement, outdoor shoots. Candid &amp; traditional styles.</p>
+        <div class="svc-card-price">From ₹25,000</div>
+        <div class="svc-card-arrow">→</div>
+      </div>
+      <div class="svc-card" onclick="showServicePage('videography')">
+        <div class="svc-icon">🎬</div>
+        <h3>Videography &amp; Films</h3>
+        <p>Cinematic wedding films, highlight reels, 4K drone footage and viral Instagram reels.</p>
+        <div class="svc-card-price">From ₹20,000</div>
+        <div class="svc-card-arrow">→</div>
+      </div>
+      <div class="svc-card" onclick="showServicePage('drone')">
+        <div class="svc-icon">🚁</div>
+        <h3>Drone Photography</h3>
+        <p>Breathtaking aerial photography and videography for weddings, events and outdoor shoots.</p>
+        <div class="svc-card-price">From ₹8,000</div>
+        <div class="svc-card-arrow">→</div>
+      </div>
+      <div class="svc-card" onclick="showServicePage('events')">
+        <div class="svc-icon">🎉</div>
+        <h3>Events &amp; Occasions</h3>
+        <p>Baby showers, puberties, engagements, birthdays, corporate events and all celebrations.</p>
+        <div class="svc-card-price">From ₹10,000</div>
+        <div class="svc-card-arrow">→</div>
+      </div>
+      <div class="svc-card" onclick="showServicePage('portraits')">
+        <div class="svc-icon">🖼</div>
+        <h3>Portrait Sessions</h3>
+        <p>Individual, couple, family and fashion portraits in studio or beautiful outdoor settings.</p>
+        <div class="svc-card-price">From ₹5,000</div>
+        <div class="svc-card-arrow">→</div>
+      </div>
+      <div class="svc-card" onclick="showServicePage('product')">
+        <div class="svc-icon">📦</div>
+        <h3>Product Photography</h3>
+        <p>Commercial product shoots for e-commerce, catalogues and social media advertising.</p>
+        <div class="svc-card-price">From ₹3,000</div>
+        <div class="svc-card-arrow">→</div>
+      </div>
+      <div class="svc-card" onclick="showServicePage('digital')">
+        <div class="svc-icon">📱</div>
+        <h3>Digital Marketing</h3>
+        <p>Instagram management, viral reels editing, channel handling and influencer campaigns.</p>
+        <div class="svc-card-price">From ₹8,000/mo</div>
+        <div class="svc-card-arrow">→</div>
+      </div>
+      <div class="svc-card" onclick="showServicePage('albums')">
+        <div class="svc-icon">📖</div>
+        <h3>Premium Albums</h3>
+        <p>Hardbound wedding albums, coffee table books, flush mount and mini gift albums.</p>
+        <div class="svc-card-price">From ₹4,000</div>
+        <div class="svc-card-arrow">→</div>
+      </div>
+      <div class="svc-card" onclick="showServicePage('typing')">
+        <div class="svc-icon">✏️</div>
+        <h3>Typing Services</h3>
+        <p>Wedding invitations, event scripts, social media captions and professional document typing.</p>
+        <div class="svc-card-price">From ₹500</div>
+        <div class="svc-card-arrow">→</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" style="background:var(--bg)">
+    <div style="text-align:center;max-width:600px;margin:0 auto">
+      <div class="sec-tag">Investment</div>
+      <h2 class="sec-title">Packages &amp; Pricing</h2>
+      <div class="divider divider-c"></div>
+      <p style="font-size:0.82rem;color:var(--ink2)">Transparent pricing. All packages include fully edited images delivered via online gallery.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-plan">Essential</div>
+        <div class="price-amount"><span>₹</span>15,000</div>
+        <div class="price-desc">Perfect for intimate events</div>
+        <ul class="price-features">
+          <li>4 Hours Coverage</li><li>1 Photographer</li><li>200 Edited Photos</li><li>Online Gallery</li><li>1 Month Delivery</li>
+        </ul>
+        <button class="btn-line" onclick="goTo('#contact')" style="width:100%;text-align:center;font-size:0.65rem">Enquire Now</button>
+      </div>
+      <div class="price-card featured">
+        <div class="feat-badge">Most Popular</div>
+        <div class="price-plan">Royal</div>
+        <div class="price-amount"><span>₹</span>45,000</div>
+        <div class="price-desc">Complete wedding experience</div>
+        <ul class="price-features">
+          <li>Full Day Coverage</li><li>2 Photographers + Videographer</li><li>Drone Aerial Footage</li><li>500+ Edited Photos</li><li>Cinematic Highlight Reel</li><li>Premium Album</li><li>3 Instagram Reels</li>
+        </ul>
+        <button class="btn-dark" onclick="goTo('#contact')" style="width:100%;text-align:center;font-size:0.65rem">Book This Package</button>
+      </div>
+      <div class="price-card">
+        <div class="price-plan">Crown</div>
+        <div class="price-amount"><span>₹</span>80,000</div>
+        <div class="price-desc">Ultimate luxury experience</div>
+        <ul class="price-features">
+          <li>2-Day Full Coverage</li><li>Team of 4</li><li>Drone + Full Wedding Film</li><li>1000+ Edited Photos</li><li>Pre + Post Wedding Shoot</li><li>Coffee Table Album</li><li>6 Months Social Reels</li>
+        </ul>
+        <button class="btn-line" onclick="goTo('#contact')" style="width:100%;text-align:center;font-size:0.65rem">Enquire Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" style="background:var(--bg2)">
+    <div style="text-align:center;max-width:600px;margin:0 auto">
+      <div class="sec-tag">Client Love</div>
+      <h2 class="sec-title">What Our Clients Say</h2>
+      <div class="divider divider-c"></div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">SS Arts Studio captured our wedding so beautifully. Every photo tells a story. The drone shots were absolutely breathtaking — we still can't believe they are from our own wedding!</p><div class="testi-author">Priya &amp; Karthik</div><div class="testi-event">Wedding — Madurai, 2024</div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">Our baby shower photos turned out magical. The team was so warm and professional. Every candid moment was captured perfectly. We will absolutely book them for every occasion!</p><div class="testi-author">Kavya Suresh</div><div class="testi-event">Baby Shower — Coimbatore, 2024</div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">The pre-wedding shoot exceeded all expectations. Beautiful locations, cinematic editing — my Instagram was flooded with compliments from friends and family for weeks!</p><div class="testi-author">Ananya &amp; Vikram</div><div class="testi-event">Pre-Wedding — Ooty, 2023</div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">Product catalogue images boosted our online sales significantly. Their attention to lighting and detail is truly professional. Highly recommended for any business!</p><div class="testi-author">Rajan Enterprises</div><div class="testi-event">Product Photography — Chennai, 2024</div></div>
+    </div>
+  </section>
+
+  <section id="contact" style="background:var(--bg)">
+    <div style="text-align:center;max-width:600px;margin:0 auto">
+      <div class="sec-tag">Get In Touch</div>
+      <h2 class="sec-title">Book Your Session</h2>
+      <div class="divider divider-c"></div>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="c-info-item"><div class="c-icon">📍</div><div><div class="c-label">Location</div><div class="c-val">Madurai, Tamil Nadu<br>Serving all of South India</div></div></div>
+        <div class="c-info-item"><div class="c-icon">📞</div><div><div class="c-label">Phone &amp; WhatsApp</div> <a href="https://wa.me/919543616119" target="_blank" style="text-decoration: none;"><div class="c-val">+91 95436 16119</div></a></div></div>
+        <div class="c-info-item"><div class="c-icon">✉</div><div><div class="c-label">Email</div><a href="mailto:ssartsstudio@gmail.com" style="text-decoration: none;"><div class="c-val">ssartsstudio@gmail.com</div></a></div></div>
+        <div class="c-info-item"><div class="c-icon">📸</div><div><div class="c-label">Instagram</div><div class="c-val">@ssartsstudio_official</div></div></div>
+        <div class="c-info-item"><div class="c-icon">▶</div><div><div class="c-label">YouTube</div><div class="c-val">SS Arts Studio</div></div></div>
+        <div style="margin-top:0.5rem;padding:1.2rem;border:1px solid var(--border);background:var(--white);border-radius:4px">
+          <div style="font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem">Booking Season</div>
+          <p style="font-size:0.78rem;color:var(--ink2);line-height:1.7">We book quickly during wedding season (Nov–Mar). Recommend reaching out <strong>3–6 months in advance</strong> to secure your preferred date.</p>
+        </div>
+        <div style="
+    margin-top: 20px;
+"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.037427108354!2d78.10354117576998!3d9.930841074219437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00cf7c78659cb7%3A0x4f01f703fe784ab7!2sSS%20Arts%20Studio!5e0!3m2!1sen!2sin!4v1778228552053!5m2!1sen!2sin" width="470" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe></div>
+      </div>
+      <div class="c-form">
+        <input type="text" placeholder="Your full name">
+        <input type="text" placeholder="Phone / WhatsApp number">
+        <input type="email" placeholder="Email address">
+        <select>
+          <option value="" disabled="" selected="">Type of service</option>
+          <option>Wedding Photography</option><option>Pre-Wedding Shoot</option><option>Post-Wedding Shoot</option>
+          <option>Videography &amp; Film</option><option>Drone Photography</option><option>Baby Shower</option>
+          <option>Puberty Ceremony</option><option>Birthday / Event</option><option>Engagement</option>
+          <option>Portrait Session</option><option>Product Photography</option><option>Premium Albums</option>
+          <option>Digital Marketing</option><option>Typing Services</option>
+        </select>
+        <input type="text" placeholder="Event date (DD/MM/YYYY)">
+        <input type="text" placeholder="Venue / Location">
+        <textarea placeholder="Tell us more about your vision and requirements..."></textarea>
+        <button class="btn-dark" onclick="alert('Thank you! We will contact you within 24 hours. 🙏')" style="width:100%;padding:0.95rem;font-size:0.72rem">Send Enquiry</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="social-strip">
+    <a href="https://instagram.com/ssartsstudio_official" target="_blank">📸 @ssartsstudio_official</a>
+    <a href="https://youtube.com" target="_blank">▶ YouTube: SS Arts Studio</a>
+    <a href="https://wa.me/919543616119" target="_blank">💬 WhatsApp: +91 95436 16119</a>
+    <a href="mailto:ssartsstudio3@gmail.com">✉ ssartsstudio3@gmail.com</a>
+  </div>
+  <footer>
+    <div class="f-logo">SS Arts Studio</div>
+    <div class="f-tagline">Capturing Timeless Memories Since 2016</div>
+    <div class="f-links">
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('home');setTimeout(()=&gt;goTo('#about'),80)">About</a>
+      <a onclick="showPage('home');setTimeout(()=&gt;goTo('#services'),80)">Services</a>
+      <a onclick="showPage('home');setTimeout(()=&gt;goTo('#pricing'),80)">Pricing</a>
+      <a onclick="showPage('home');setTimeout(()=&gt;goTo('#contact'),80)">Book Now</a>
+    </div>
+    <div class="f-copy">© 2026 SS Arts Studio. All Rights Reserved. Madurai, Tamil Nadu.</div>
+  </footer>
+</div>
+
+<!-- ====== SERVICE DETAIL PAGE ====== -->
+<div class="page" id="page-service">
+  <div id="service-detail-content">
+    <div class="svc-detail-hero">
+      <div class="svc-detail-hero-inner">
+        <div>
+          <button class="svc-detail-back" onclick="showPage('home');setTimeout(()=&gt;goTo('#services'),80)">← Back to Services</button>
+          <div style="font-size:0.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem">💍 &nbsp; SS Arts Studio</div>
+          <div class="svc-detail-title">Wedding Photography</div>
+          <div class="svc-detail-sub">Pre-Wedding · Ceremony · Reception · Post-Wedding · Engagement</div>
+          <div class="svc-detail-desc">We document your wedding day from the very first ritual to the last dance. Our photographers blend into the background capturing raw, unposed emotions alongside elegant formals. Every shoot includes multiple editing styles — classic, cinematic and warm editorial.</div>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap">
+            <button class="btn-dark" onclick="showPage('home');setTimeout(()=&gt;goTo('#contact'),80)">Book This Service</button>
+            <button class="btn-line" onclick="showPage('home');setTimeout(()=&gt;goTo('#contact'),80)">Get a Quote</button>
+          </div>
+        </div>
+        <img class="svc-detail-img" src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1200&amp;q=80" alt="Wedding Photography">
+      </div>
+    </div>
+
+    <div class="media-section">
+      <div class="media-section-title">
+        <div>
+          <div class="sec-tag">Our Work</div>
+          <h2 class="sec-title" style="margin-bottom:0">Photos &amp; Videos</h2>
+        </div>
+        <div class="media-tabs">
+          <button class="media-tab active" id="tab-photos" onclick="switchMediaTab('photos')">Photos (7)</button>
+          <button class="media-tab" id="tab-videos" onclick="switchMediaTab('videos')">Videos (3)</button>
+        </div>
+      </div>
+      <div id="media-photos" style="display:block">
+        <div class="photo-grid photo-grid-main">
+    <div class="photo-item tall" onclick="openLightbox('https://images.unsplash.com/photo-1519741497674-611481863552?w=800&amp;q=80','Bridal Ceremony')">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&amp;q=80" alt="Bridal Ceremony" loading="lazy">
+      <div class="photo-overlay"><span class="photo-label">Bridal Ceremony</span></div>
+    </div>
+    <div class="photo-item " onclick="openLightbox('https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800&amp;q=80','Golden Hour')">
+      <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800&amp;q=80" alt="Golden Hour" loading="lazy">
+      <div class="photo-overlay"><span class="photo-label">Golden Hour</span></div>
+    </div>
+    <div class="photo-item " onclick="openLightbox('https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&amp;q=80','Couple Moments')">
+      <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&amp;q=80" alt="Couple Moments" loading="lazy">
+      <div class="photo-overlay"><span class="photo-label">Couple Moments</span></div>
+    </div>
+    <div class="photo-item wide" onclick="openLightbox('https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=800&amp;q=80','Reception Evening')">
+      <img src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=800&amp;q=80" alt="Reception Evening" loading="lazy">
+      <div class="photo-overlay"><span class="photo-label">Reception Evening</span></div>
+    </div>
+    <div class="photo-item " onclick="openLightbox('https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800&amp;q=80','Bridal Mehendi')">
+      <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800&amp;q=80" alt="Bridal Mehendi" loading="lazy">
+      <div class="photo-overlay"><span class="photo-label">Bridal Mehendi</span></div>
+    </div>
+    <div class="photo-item " onclick="openLightbox('https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&amp;q=80','Venue Grandeur')">
+      <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&amp;q=80" alt="Venue Grandeur" loading="lazy">
+      <div class="photo-overlay"><span class="photo-label">Venue Grandeur</span></div>
+    </div>
+    <div class="photo-item " onclick="openLightbox('https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=800&amp;q=80','Sangeet Night')">
+      <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=800&amp;q=80" alt="Sangeet Night" loading="lazy">
+      <div class="photo-overlay"><span class="photo-label">Sangeet Night</span></div>
+    </div></div>
+      </div>
+      <div id="media-videos" style="display:none">
+        <div class="video-grid">
+    <div class="video-card">
+      <div class="video-thumb" onclick="openVideo('YOUR_VIDEO_ID_HERE','Wedding Highlight Reel – Priya &amp; Karthik')">
+        <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=600&amp;q=80" alt="Wedding Highlight Reel – Priya &amp; Karthik" loading="lazy">
+        <div class="video-play">▶</div>
+        <div class="video-duration">3:42</div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">Wedding Highlight Reel – Priya &amp; Karthik</div>
+        <div class="video-meta">Madurai Wedding · 2024</div>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="video-thumb" onclick="openVideo('YOUR_VIDEO_ID_HERE','Full Wedding Film – Ananya &amp; Ravi')">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&amp;q=80" alt="Full Wedding Film – Ananya &amp; Ravi" loading="lazy">
+        <div class="video-play">▶</div>
+        <div class="video-duration">18:20</div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">Full Wedding Film – Ananya &amp; Ravi</div>
+        <div class="video-meta">Coimbatore Wedding · 2024</div>
+      </div>
+    </div>
+    <div class="video-card">
+      <div class="video-thumb" onclick="openVideo('YOUR_VIDEO_ID_HERE','Pre-Wedding Film – Ooty Shoot')">
+        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&amp;q=80" alt="Pre-Wedding Film – Ooty Shoot" loading="lazy">
+        <div class="video-play">▶</div>
+        <div class="video-duration">4:15</div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">Pre-Wedding Film – Ooty Shoot</div>
+        <div class="video-meta">Outdoor Pre-Wedding · 2023</div>
+      </div>
+    </div></div>
+      </div>
+    </div>
+
+    <section style="background:var(--bg2);padding:4rem 3rem">
+      <div style="max-width:1200px;margin:0 auto">
+        <div class="sec-tag">What's Included</div>
+        <h2 class="sec-title">Sub-Services &amp; Details</h2>
+        <div class="divider"></div>
+        <div class="sub-svcs">
+    <div class="sub-svc">
+      <div class="sub-svc-name">Bridal Ceremony Coverage</div>
+      <div class="sub-svc-desc">Complete documentation of all rituals — mehendi, haldi, sangeet, nadaswaram procession and wedding ceremony with candid and posed shots.</div>
+      <div class="sub-svc-price">Included in packages</div>
+    </div>
+    <div class="sub-svc">
+      <div class="sub-svc-name">Pre-Wedding Shoot</div>
+      <div class="sub-svc-desc">Romantic outdoor or theme-based couple shoot at scenic locations — Ooty, Kodaikanal, beach or a custom venue of your choice.</div>
+      <div class="sub-svc-price">From ₹8,000</div>
+    </div>
+    <div class="sub-svc">
+      <div class="sub-svc-name">Post-Wedding Shoot</div>
+      <div class="sub-svc-desc">Relaxed creative couple portraits after the celebrations — editorial imagery without the rush of the wedding day itself.</div>
+      <div class="sub-svc-price">From ₹6,000</div>
+    </div>
+    <div class="sub-svc">
+      <div class="sub-svc-name">Engagement Ceremony</div>
+      <div class="sub-svc-desc">Dedicated engagement coverage with ring exchange, family moments and couple portraits in one beautiful session.</div>
+      <div class="sub-svc-price">From ₹10,000</div>
+    </div>
+    <div class="sub-svc">
+      <div class="sub-svc-name">Outdoor Location Shoots</div>
+      <div class="sub-svc-desc">Golden hour shoots at beaches, farms, temples and heritage sites across Tamil Nadu and South India.</div>
+      <div class="sub-svc-price">From ₹5,000</div>
+    </div>
+    <div class="sub-svc">
+      <div class="sub-svc-name">Reception Evening</div>
+      <div class="sub-svc-desc">Stylish reception coverage capturing décor details, family portraits, couple entrance and first dances.</div>
+      <div class="sub-svc-price">From ₹12,000</div>
+    </div></div>
+      </div>
+    </section>
+
+    <section style="background:var(--bg);padding:4rem 3rem">
+      <div style="max-width:1100px;margin:0 auto">
+        <div class="sec-tag">Client Love</div>
+        <h2 class="sec-title">What Clients Say</h2>
+        <div class="divider"></div>
+        <div class="testi-grid" style="margin-top:0">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">Every photo tells a story. The drone shots were absolutely breathtaking — we still cannot believe they are from our own wedding!</p>
+      <div class="testi-author">Priya &amp; Karthik</div>
+      <div class="testi-event">Wedding, Madurai 2024</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">The team blended in perfectly and captured every emotional moment we did not even know was happening. Truly magical.</p>
+      <div class="testi-author">Deepa &amp; Suresh</div>
+      <div class="testi-event">Wedding, Chennai 2024</div>
+    </div></div>
+      </div>
+    </section>
+
+    <section style="background:var(--ink);padding:4rem 3rem;text-align:center">
+      <div style="font-size:0.62rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold-mid);margin-bottom:0.8rem">Ready to get started?</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:#fff;margin-bottom:0.5rem">Let's Create Something <em style="color:var(--gold)">Beautiful</em></div>
+      <p style="font-size:0.8rem;color:rgba(255,255,255,0.45);margin-bottom:2rem">Get in touch to check availability and receive a custom quote for your event.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <button class="btn-dark" style="background:var(--gold);color:var(--ink)" onclick="showPage('home');setTimeout(()=&gt;goTo('#contact'),80)">Book Now</button>
+        <a href="https://wa.me/919543616119" target="_blank" class="btn-line" style="border-color:rgba(255,255,255,0.3);color:#fff">WhatsApp Us</a>
+      </div>
+    </section>
+
+    <div class="social-strip">
+      <a href="https://instagram.com/ssartsstudio_official" target="_blank">📸 @ssartsstudio_official</a>
+      <a href="https://youtube.com" target="_blank">▶ YouTube: SS Arts Studio</a>
+      <a href="https://wa.me/919543616119" target="_blank">💬 WhatsApp: +91 95436 16119</a>
+      <a href="mailto:ssartsstudio@gmail.com">✉ ssartsstudio@gmail.com</a>
+    </div>
+    <footer>
+      <div class="f-logo">SS Arts Studio</div>
+      <div class="f-tagline">Capturing Timeless Memories Since 2016</div>
+      <div class="f-links">
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('home');setTimeout(()=&gt;goTo('#services'),80)">Services</a>
+        <a onclick="showPage('home');setTimeout(()=&gt;goTo('#pricing'),80)">Pricing</a>
+        <a onclick="showPage('home');setTimeout(()=&gt;goTo('#contact'),80)">Book Now</a>
+      </div>
+      <div class="f-copy">© 2025 SS Arts Studio. All Rights Reserved. Madurai, Tamil Nadu.</div>
+    </footer></div>
+</div>
+
+<script>
+const services = {
+  wedding:{
+    icon:'💍',title:'Wedding Photography',sub:'Pre-Wedding · Ceremony · Reception · Post-Wedding · Engagement',
+    desc:'We document your wedding day from the very first ritual to the last dance. Our photographers blend into the background capturing raw, unposed emotions alongside elegant formals. Every shoot includes multiple editing styles — classic, cinematic and warm editorial.',
+    heroImg:'file:///G:/Hari/portfiolio/portfolio/assets/wedding%20photography/1.JPG',
+    subServices:[
+      {name:'Bridal Ceremony Coverage',desc:'Complete documentation of all rituals — mehendi, haldi, sangeet, nadaswaram procession and wedding ceremony with candid and posed shots.',price:'Included in packages'},
+      {name:'Pre-Wedding Shoot',desc:'Romantic outdoor or theme-based couple shoot at scenic locations — Ooty, Kodaikanal, beach or a custom venue of your choice.',price:'From ₹8,000'},
+      {name:'Post-Wedding Shoot',desc:'Relaxed creative couple portraits after the celebrations — editorial imagery without the rush of the wedding day itself.',price:'From ₹6,000'},
+      {name:'Engagement Ceremony',desc:'Dedicated engagement coverage with ring exchange, family moments and couple portraits in one beautiful session.',price:'From ₹10,000'},
+      {name:'Outdoor Location Shoots',desc:'Golden hour shoots at beaches, farms, temples and heritage sites across Tamil Nadu and South India.',price:'From ₹5,000'},
+      {name:'Reception Evening',desc:'Stylish reception coverage capturing décor details, family portraits, couple entrance and first dances.',price:'From ₹12,000'},
+    ],
+    photos:[
+      {src:'file:///G:/Hari/portfiolio/portfolio/assets/wedding%20photography/side.JPG',label:'Bridal Ceremony',cls:'tall'},
+      {src:'file:///G:/Hari/portfiolio/portfolio/assets/wedding%20photography/_MG_0412.JPG',label:'Golden Hour',cls:''},
+      {src:'file:///G:/Hari/portfiolio/portfolio/assets/wedding%20photography/031A1137.JPG',label:'Couple Moments',cls:''},
+      {src:'file:///G:/Hari/portfiolio/portfolio/assets/wedding%20photography/mid.JPG',label:'Reception Evening',cls:'wide'},
+      {src:'file:///G:/Hari/portfiolio/portfolio/assets/wedding%20photography/538A0565.JPG',label:'Bridal Mehendi',cls:''},
+      {src:'file:///G:/Hari/portfiolio/portfolio/assets/wedding%20photography/_DSC7701.JPG',label:'Venue Grandeur',cls:''},
+      {src:'file:///G:/Hari/portfiolio/portfolio/assets/wedding%20photography/538A0036.JPG',label:'Sangeet Night',cls:''},
+    ],
+    videos:[
+      {thumb:'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=600&q=80',title:'Wedding Highlight Reel – Priya & Karthik',meta:'Madurai Wedding · 2024',duration:'3:42',ytId:'YOUR_VIDEO_ID_HERE'},
+      {thumb:'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80',title:'Full Wedding Film – Ananya & Ravi',meta:'Coimbatore Wedding · 2024',duration:'18:20',ytId:'YOUR_VIDEO_ID_HERE'},
+      {thumb:'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80',title:'Pre-Wedding Film – Ooty Shoot',meta:'Outdoor Pre-Wedding · 2023',duration:'4:15',ytId:'YOUR_VIDEO_ID_HERE'},
+    ],
+    testi:[
+      {text:'Every photo tells a story. The drone shots were absolutely breathtaking — we still cannot believe they are from our own wedding!',author:'Priya & Karthik',event:'Wedding, Madurai 2024'},
+      {text:'The team blended in perfectly and captured every emotional moment we did not even know was happening. Truly magical.',author:'Deepa & Suresh',event:'Wedding, Chennai 2024'},
+    ]
+  },
+  videography:{
+    icon:'🎬',title:'Videography & Cinematic Films',sub:'Wedding Films · Highlight Reels · Instagram Reels · 4K Production',
+    desc:'Our videography team creates films that feel like cinema — colour graded, beautifully scored and edited to move you. From short viral reels to full-length wedding films, we deliver content your guests and family will watch again and again.',
+    heroImg:'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=1200&q=80',
+    subServices:[
+      {name:'Full Wedding Film',desc:'A 15–30 minute cinematic documentary of your complete wedding day, colour graded and scored with licensed music.',price:'From ₹20,000'},
+      {name:'Highlight Reel',desc:'A punchy 3–5 minute summary reel of the best wedding moments, perfect for sharing with family and on social media.',price:'From ₹8,000'},
+      {name:'Instagram Reels Editing',desc:'Viral-style vertical reels with trending audio, smooth transitions and cinematic colour grading for maximum reach.',price:'From ₹2,000/reel'},
+      {name:'Drone Aerial Video',desc:'4K aerial footage of your venue, outdoor locations and ceremony — breathtaking bird\'s eye perspectives.',price:'From ₹8,000'},
+      {name:'Event Video Coverage',desc:'Full video documentation of any event — baby showers, birthdays, corporate events, stage programs and more.',price:'From ₹10,000'},
+    ],
+    photos:[
+      {src:'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&q=80',label:'Wedding Film',cls:'wide'},
+      {src:'https://images.unsplash.com/photo-1536240478700-b869ad10e128?w=800&q=80',label:'Behind the Scenes',cls:''},
+      {src:'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80',label:'On Location',cls:''},
+      {src:'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&q=80',label:'Event Coverage',cls:''},
+    ],
+    videos:[
+      {thumb:'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=600&q=80',title:'Cinematic Wedding Teaser – SS Arts',meta:'SS Arts Studio · 2024',duration:'1:30',ytId:'YOUR_VIDEO_ID_HERE'},
+      {thumb:'https://images.unsplash.com/photo-1536240478700-b869ad10e128?w=600&q=80',title:'Instagram Reel Compilation 2024',meta:'Best of 2024',duration:'0:45',ytId:'YOUR_VIDEO_ID_HERE'},
+    ],
+    testi:[
+      {text:'The wedding film made us cry every single time we watch it. We feel like we are reliving the day. Absolutely worth every rupee.',author:'Meena & Arjun',event:'Wedding Film, Salem 2024'},
+    ]
+  },
+  drone:{
+    icon:'🚁',title:'Drone Photography & Videography',sub:'Aerial Stills · Cinematic Aerials · Venue Overviews · 4K Quality',
+    desc:'Elevate your wedding or event with stunning aerial perspectives. Our certified drone operators deliver sweeping landscape shots, dramatic venue overviews and intimate aerial couple portraits that no ground-level camera can replicate.',
+    heroImg:'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=1200&q=80',
+    subServices:[
+      {name:'Wedding Aerial Shoot',desc:'Aerial shots of the wedding procession, venue setup and couple portraits from dramatic heights. Cinematic and unforgettable.',price:'From ₹8,000'},
+      {name:'Pre-Wedding Drone Session',desc:'Romantic bird\'s eye couple shots at outdoor locations — beaches, hilltops, heritage sites and more.',price:'From ₹6,000'},
+      {name:'Event Aerial Coverage',desc:'Wide aerial footage of large gatherings, outdoor events and venue walkthroughs before and during events.',price:'From ₹5,000'},
+      {name:'Landscape & Property Shoots',desc:'Architectural and landscape aerial photography for venues, resorts, farms and commercial properties.',price:'From ₹6,000'},
+    ],
+    photos:[
+      {src:'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&q=80',label:'Aerial View',cls:'wide'},
+      {src:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',label:'Venue Aerial',cls:''},
+      {src:'https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=800&q=80',label:'Landscape',cls:''},
+      {src:'https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&q=80',label:'Wedding Aerial',cls:''},
+    ],
+    videos:[
+      {thumb:'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=600&q=80',title:'Wedding Drone Highlights – Madurai',meta:'Aerial Cinematography · 2024',duration:'2:10',ytId:'YOUR_VIDEO_ID_HERE'},
+    ],
+    testi:[
+      {text:'The aerial shots of our venue were jaw-dropping. Guests from abroad said they felt transported right back to our wedding.',author:'Ravi & Nithya',event:'Drone Coverage, Madurai 2024'},
+    ]
+  },
+  events:{
+    icon:'🎉',title:'Events & Occasions',sub:'Baby Shower · Puberty · Engagements · Birthdays · Corporate Events',
+    desc:'Every milestone in life deserves to be beautifully documented. Our events team covers all types of Tamil Nadu celebrations — from intimate ceremonies to large public events — with warmth, professionalism and an eye for emotional details.',
+    heroImg:'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&q=80',
+    subServices:[
+      {name:'Baby Shower / Valaikappu',desc:'Candid and decorative coverage of valaikappu or baby shower ceremonies — mom-to-be portraits and full family documentation.',price:'From ₹8,000'},
+      {name:'Puberty Ceremony',desc:'Respectful, detailed coverage of this important coming-of-age ceremony with family portraits and ritual documentation.',price:'From ₹8,000'},
+      {name:'Birthday Celebrations',desc:'Fun colourful coverage from first birthdays to milestone parties — décor, cake cutting, games and family moments.',price:'From ₹6,000'},
+      {name:'Engagement Ceremony',desc:'Full engagement photography with ring ceremony, family portraits and couple photos in a joyful celebratory session.',price:'From ₹10,000'},
+      {name:'Corporate Events',desc:'Professional photography for conferences, product launches, award ceremonies and company gatherings.',price:'From ₹12,000'},
+      {name:'Stage & Cultural Programs',desc:'High-speed photography for music shows, cultural programs, dance events and competitions.',price:'From ₹10,000'},
+    ],
+    photos:[
+      {src:'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80',label:'Baby Shower',cls:'tall'},
+      {src:'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=800&q=80',label:'Birthday Party',cls:''},
+      {src:'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80',label:'Corporate Event',cls:''},
+      {src:'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&q=80',label:'Stage Program',cls:'wide'},
+      {src:'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80',label:'Grand Celebration',cls:''},
+    ],
+    videos:[
+      {thumb:'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80',title:'Baby Shower Highlights – Coimbatore',meta:'Event Coverage · 2024',duration:'2:30',ytId:'YOUR_VIDEO_ID_HERE'},
+      {thumb:'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=600&q=80',title:'Birthday Celebration Reel',meta:'Madurai · 2024',duration:'1:45',ytId:'YOUR_VIDEO_ID_HERE'},
+    ],
+    testi:[
+      {text:'Our baby shower photos turned out magical. The team was so warm and professional. Every candid moment was captured perfectly.',author:'Kavya Suresh',event:'Baby Shower, Coimbatore 2024'},
+    ]
+  },
+  portraits:{
+    icon:'🖼',title:'Portrait Sessions',sub:'Individual · Couple · Family · Fashion · Outdoor',
+    desc:'Our portrait sessions are designed to make you feel comfortable and confident in front of the camera. Whether you want studio precision or natural outdoor light, we bring out the best version of you in every single frame.',
+    heroImg:'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1200&q=80',
+    subServices:[
+      {name:'Individual Portraits',desc:'Professional headshots, personal branding shoots and artistic individual portraits in studio or outdoor settings.',price:'From ₹3,000'},
+      {name:'Couple Sessions',desc:'Romantic and natural couple photography for anniversaries, milestones or just because — no occasion needed.',price:'From ₹5,000'},
+      {name:'Family Portraits',desc:'Warm, joyful family sessions capturing personalities and relationships. Indoor or outdoor, all ages welcome.',price:'From ₹6,000'},
+      {name:'Fashion & Editorial',desc:'High-fashion editorial portraits for models, influencers and personal lookbooks with professional creative direction.',price:'From ₹8,000'},
+    ],
+    photos:[
+      {src:'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80',label:'Individual Portrait',cls:'tall'},
+      {src:'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80',label:'Fashion Editorial',cls:''},
+      {src:'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',label:'Professional Headshot',cls:''},
+      {src:'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80',label:'Family Session',cls:'wide'},
+    ],
+    videos:[
+      {thumb:'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80',title:'Portrait Session – Behind the Scenes',meta:'SS Arts Studio · 2024',duration:'1:20',ytId:'YOUR_VIDEO_ID_HERE'},
+    ],
+    testi:[
+      {text:'I was nervous in front of the camera but the team made me feel completely at ease. The photos came out better than I ever imagined.',author:'Lakshmi R.',event:'Individual Portrait, Madurai 2024'},
+    ]
+  },
+  product:{
+    icon:'📦',title:'Product Photography',sub:'E-commerce · Lifestyle · Jewellery · Food & Beverage',
+    desc:'Your product deserves photography that sells. We create clean, commercial images that highlight quality and detail — perfectly optimised for Amazon, Flipkart, Instagram and brand catalogues. Our work has been proven to increase sales.',
+    heroImg:'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1200&q=80',
+    subServices:[
+      {name:'White Background Shots',desc:'Clean professional product photos on pure white or neutral backgrounds. Ideal for all e-commerce platforms.',price:'From ₹150/image'},
+      {name:'Lifestyle Product Shoots',desc:'Products photographed in real-life settings and scenes, perfect for social media, ads and brand storytelling.',price:'From ₹5,000'},
+      {name:'Jewellery Photography',desc:'Macro and detail photography for rings, necklaces, earrings and all jewellery types with precise lighting setups.',price:'From ₹200/piece'},
+      {name:'Food & Beverage',desc:'Appetising restaurant menu photography, packaged food shoots and beverage photography for brands and social media.',price:'From ₹4,000'},
+    ],
+    photos:[
+      {src:'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80',label:'Watch Collection',cls:''},
+      {src:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80',label:'Footwear',cls:''},
+      {src:'https://images.unsplash.com/photo-1586495777744-4e6232bf0b59?w=800&q=80',label:'Cosmetics',cls:''},
+      {src:'https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800&q=80',label:'Apparel',cls:''},
+    ],
+    videos:[
+      {thumb:'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80',title:'Product Shoot – Behind the Scenes',meta:'Commercial Shoot · 2024',duration:'1:50',ytId:'YOUR_VIDEO_ID_HERE'},
+    ],
+    testi:[
+      {text:'Product catalogue images boosted our online sales by 40%. Their attention to lighting and detail is truly professional.',author:'Rajan Enterprises',event:'Product Photography, Chennai 2024'},
+    ]
+  },
+  digital:{
+    icon:'📱',title:'Digital Marketing',sub:'Instagram · Reels · Channel Management · Influencer Campaigns',
+    desc:'We do not just photograph your brand — we grow it. Our digital marketing team manages your entire social presence, creating content that attracts, engages and converts your target audience consistently every single month.',
+    heroImg:'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&q=80',
+    subServices:[
+      {name:'Instagram Management',desc:'Full account management — content calendar, daily posting, caption writing, hashtag research and audience engagement.',price:'From ₹8,000/mo'},
+      {name:'Viral Reels Editing',desc:'Trending-audio reels with cinematic transitions, motion graphics and colour grading to maximise reach and views.',price:'From ₹2,000/reel'},
+      {name:'Own Channel Handling',desc:'YouTube or social channel setup, SEO optimisation, thumbnail design, upload scheduling and performance analytics.',price:'From ₹6,000/mo'},
+      {name:'Influencer Collaborations',desc:'Identifying the right influencers, campaign strategy, outreach coordination and performance tracking for your brand.',price:'Custom quotes'},
+      {name:'Brand Photography',desc:'Monthly or quarterly content shoots for consistent visual identity across your website and social media channels.',price:'From ₹5,000/session'},
+    ],
+    photos:[
+      {src:'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80',label:'Social Media',cls:'wide'},
+      {src:'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80',label:'Content Strategy',cls:''},
+      {src:'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',label:'Analytics',cls:''},
+      {src:'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80',label:'Campaigns',cls:''},
+    ],
+    videos:[
+      {thumb:'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80',title:'Instagram Reels Showcase – SS Arts',meta:'Social Media · 2024',duration:'0:58',ytId:'YOUR_VIDEO_ID_HERE'},
+    ],
+    testi:[
+      {text:'Our Instagram grew from 500 to 12,000 followers in just 4 months after hiring SS Arts Studio. The content quality is next level.',author:'FreshBakes Madurai',event:'Instagram Management, 2024'},
+    ]
+  },
+  albums:{
+    icon:'📖',title:'Premium Albums',sub:'Hardbound · Coffee Table · Flush Mount · Mini Albums',
+    desc:'Your photographs deserve to live beyond a phone screen. We design and produce premium quality albums and photobooks that become heirlooms — beautifully crafted to be passed down through generations and treasured forever.',
+    heroImg:'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1200&q=80',
+    subServices:[
+      {name:'Hardbound Wedding Album',desc:'Premium leather or linen hardbound albums with professional layout design. Available in 12x12, 14x14 and custom sizes.',price:'From ₹4,000'},
+      {name:'Coffee Table Book',desc:'Large-format luxury photobook with editorial layout — a stunning statement piece for your home.',price:'From ₹8,000'},
+      {name:'Flush Mount Album',desc:'Full-bleed prints with no borders or gutters. Images span seamlessly across pages for a panoramic feel.',price:'From ₹5,000'},
+      {name:'Mini Albums & Gift Sets',desc:'Compact albums as keepsakes for parents and relatives. Budget-friendly and beautifully designed gift sets.',price:'From ₹1,500'},
+    ],
+    photos:[
+      {src:'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80',label:'Wedding Album',cls:'wide'},
+      {src:'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80',label:'Coffee Table Book',cls:''},
+      {src:'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&q=80',label:'Photobook',cls:''},
+    ],
+    videos:[
+      {thumb:'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80',title:'Album Design Process – SS Arts Studio',meta:'Behind the Scenes · 2024',duration:'2:05',ytId:'YOUR_VIDEO_ID_HERE'},
+    ],
+    testi:[
+      {text:'The coffee table album is absolutely stunning. It sits in our living room and every guest who visits cannot stop flipping through it.',author:'Meenakshi & Vijay',event:'Wedding Album, Trichy 2024'},
+    ]
+  },
+  typing:{
+    icon:'✏️',title:'Typing Services',sub:'Invitations · Scripts · Captions · Documents',
+    desc:'Professional typing and content writing for all your event communication needs. Beautifully formatted, error-free and delivered quickly — whether you need a wedding invitation or a full event script in Tamil or English.',
+    heroImg:'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80',
+    subServices:[
+      {name:'Wedding Invitations',desc:'Elegant traditionally formatted wedding invitation content in Tamil and English with proper honourifics and family names.',price:'From ₹500'},
+      {name:'Event Scripts & Announcements',desc:'Stage scripts, MC anchoring notes and event announcements for weddings, corporate shows and cultural programs.',price:'From ₹800'},
+      {name:'Social Media Captions',desc:'Engaging, on-brand captions for Instagram, Facebook and WhatsApp — for photos, events and business promotions.',price:'From ₹200/caption'},
+      {name:'Document Typing',desc:'Professional document formatting, bio writing, thank-you messages, certificates and general purpose typing.',price:'From ₹300/page'},
+    ],
+    photos:[
+      {src:'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80',label:'Writing',cls:'wide'},
+      {src:'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&q=80',label:'Invitations',cls:''},
+      {src:'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&q=80',label:'Documents',cls:''},
+    ],
+    videos:[],
+    testi:[
+      {text:'They designed and typed our entire wedding invitation in both Tamil and English perfectly. Fast, affordable and beautifully done.',author:'Preethi & Ganesh',event:'Wedding Invitation, Madurai 2024'},
+    ]
+  }
+};
+
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function goTo(selector){
+  const el=document.querySelector(selector);
+  if(el)el.scrollIntoView({behavior:'smooth'});
+}
+
+function showServicePage(key){
+  const s=services[key];
+  if(!s)return;
+
+  const photoHTML=s.photos.map(p=>`
+    <div class="photo-item ${p.cls}" onclick="openLightbox('${p.src}','${p.label}')">
+      <img src="${p.src}" alt="${p.label}" loading="lazy">
+      <div class="photo-overlay"><span class="photo-label">${p.label}</span></div>
+    </div>`).join('');
+
+  const videoHTML=s.videos.length?s.videos.map(v=>`
+    <div class="video-card">
+      <div class="video-thumb" onclick="openVideo('${v.ytId}','${v.title}')">
+        <img src="${v.thumb}" alt="${v.title}" loading="lazy">
+        <div class="video-play">&#9654;</div>
+        <div class="video-duration">${v.duration}</div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">${v.title}</div>
+        <div class="video-meta">${v.meta}</div>
+      </div>
+    </div>`).join('')
+    :'<p style="color:var(--ink3);font-size:0.84rem;padding:2rem 0">Videos coming soon. Follow us on Instagram &amp; YouTube for the latest films.</p>';
+
+  const videoTab=s.videos.length?`<button class="media-tab" id="tab-videos" onclick="switchMediaTab('videos')">Videos (${s.videos.length})</button>`:'';
+
+  const subHTML=s.subServices.map(ss=>`
+    <div class="sub-svc">
+      <div class="sub-svc-name">${ss.name}</div>
+      <div class="sub-svc-desc">${ss.desc}</div>
+      <div class="sub-svc-price">${ss.price}</div>
+    </div>`).join('');
+
+  const testiHTML=s.testi.map(t=>`
+    <div class="testi-card">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testi-text">${t.text}</p>
+      <div class="testi-author">${t.author}</div>
+      <div class="testi-event">${t.event}</div>
+    </div>`).join('');
+
+  document.getElementById('service-detail-content').innerHTML=`
+    <div class="svc-detail-hero">
+      <div class="svc-detail-hero-inner">
+        <div>
+          <button class="svc-detail-back" onclick="showPage('home');setTimeout(()=>goTo('#services'),80)">&#8592; Back to Services</button>
+          <div style="font-size:0.6rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem">${s.icon} &nbsp; SS Arts Studio</div>
+          <div class="svc-detail-title">${s.title}</div>
+          <div class="svc-detail-sub">${s.sub}</div>
+          <div class="svc-detail-desc">${s.desc}</div>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap">
+            <button class="btn-dark" onclick="showPage('home');setTimeout(()=>goTo('#contact'),80)">Book This Service</button>
+            <button class="btn-line" onclick="showPage('home');setTimeout(()=>goTo('#contact'),80)">Get a Quote</button>
+          </div>
+        </div>
+        <img class="svc-detail-img" src="${s.heroImg}" alt="${s.title}">
+      </div>
+    </div>
+
+    <div class="media-section">
+      <div class="media-section-title">
+        <div>
+          <div class="sec-tag">Our Work</div>
+          <h2 class="sec-title" style="margin-bottom:0">Photos &amp; Videos</h2>
+        </div>
+        <div class="media-tabs">
+          <button class="media-tab active" id="tab-photos" onclick="switchMediaTab('photos')">Photos (${s.photos.length})</button>
+          ${videoTab}
+        </div>
+      </div>
+      <div id="media-photos" style="display:block">
+        <div class="photo-grid photo-grid-main">${photoHTML}</div>
+      </div>
+      <div id="media-videos" style="display:none">
+        <div class="video-grid">${videoHTML}</div>
+      </div>
+    </div>
+
+    <section style="background:var(--bg2);padding:4rem 3rem">
+      <div style="max-width:1200px;margin:0 auto">
+        <div class="sec-tag">What's Included</div>
+        <h2 class="sec-title">Sub-Services &amp; Details</h2>
+        <div class="divider"></div>
+        <div class="sub-svcs">${subHTML}</div>
+      </div>
+    </section>
+
+    <section style="background:var(--bg);padding:4rem 3rem">
+      <div style="max-width:1100px;margin:0 auto">
+        <div class="sec-tag">Client Love</div>
+        <h2 class="sec-title">What Clients Say</h2>
+        <div class="divider"></div>
+        <div class="testi-grid" style="margin-top:0">${testiHTML}</div>
+      </div>
+    </section>
+
+    <section style="background:var(--ink);padding:4rem 3rem;text-align:center">
+      <div style="font-size:0.62rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold-mid);margin-bottom:0.8rem">Ready to get started?</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:#fff;margin-bottom:0.5rem">Let's Create Something <em style="color:var(--gold)">Beautiful</em></div>
+      <p style="font-size:0.8rem;color:rgba(255,255,255,0.45);margin-bottom:2rem">Get in touch to check availability and receive a custom quote for your event.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <button class="btn-dark" style="background:var(--gold);color:var(--ink)" onclick="showPage('home');setTimeout(()=>goTo('#contact'),80)">Book Now</button>
+        <a href="https://wa.me/919543616119" target="_blank" class="btn-line" style="border-color:rgba(255,255,255,0.3);color:#fff">WhatsApp Us</a>
+      </div>
+    </section>
+
+    <div class="social-strip">
+      <a href="https://instagram.com/ssartsstudio_official" target="_blank">&#128248; @ssartsstudio_official</a>
+      <a href="https://youtube.com" target="_blank">&#9654; YouTube: SS Arts Studio</a>
+      <a href="https://wa.me/919543616119" target="_blank">&#128172; WhatsApp: +91 95436 16119</a>
+      <a href="mailto:ssartsstudio@gmail.com">&#9993; ssartsstudio@gmail.com</a>
+    </div>
+    <footer>
+      <div class="f-logo">SS Arts Studio</div>
+      <div class="f-tagline">Capturing Timeless Memories Since 2016</div>
+      <div class="f-links">
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('home');setTimeout(()=>goTo('#services'),80)">Services</a>
+        <a onclick="showPage('home');setTimeout(()=>goTo('#pricing'),80)">Pricing</a>
+        <a onclick="showPage('home');setTimeout(()=>goTo('#contact'),80)">Book Now</a>
+      </div>
+      <div class="f-copy">&#169; 2025 SS Arts Studio. All Rights Reserved. Madurai, Tamil Nadu.</div>
+    </footer>`;
+
+  showPage('service');
+}
+
+function switchMediaTab(tab){
+  document.getElementById('media-photos').style.display=tab==='photos'?'block':'none';
+  const mv=document.getElementById('media-videos');
+  if(mv)mv.style.display=tab==='videos'?'block':'none';
+  document.querySelectorAll('.media-tab').forEach(b=>b.classList.remove('active'));
+  const active=document.getElementById('tab-'+tab);
+  if(active)active.classList.add('active');
+}
+
+function openLightbox(src,label){
+  document.getElementById('lightbox-img').src=src;
+  document.getElementById('lightbox-label').textContent=label;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function openVideo(ytId,title){
+  if(!ytId||ytId==='YOUR_VIDEO_ID_HERE'){
+    alert('Video coming soon! Follow @ssartsstudio_official on Instagram and YouTube for the latest films.');
+    return;
+  }
+  document.getElementById('videoModalContent').innerHTML=`
+    <div class="video-modal-yt">
+      <iframe src="https://www.youtube.com/embed/${ytId}?autoplay=1" allow="autoplay;encrypted-media" allowfullscreen></iframe>
+    </div>`;
+  document.getElementById('videoModalTitle').textContent=title;
+  document.getElementById('videoModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeVideoModal(){
+  document.getElementById('videoModalContent').innerHTML='';
+  document.getElementById('videoModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){closeLightbox();closeVideoModal();}
+});
+</script>
+
+
+</body></html>
